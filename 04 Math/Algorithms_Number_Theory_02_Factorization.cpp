@@ -151,7 +151,7 @@ vector<ll> factorization(ll n) 	 // max n is 1e12
 
 	for (ll i = 2; i * i <= n; ++i)	// Improve start by i = 3.
 		while (n % i == 0)
-			primes.push_back(i), n = i;	// Get every prime inside n.    n / i^j is a new number
+			primes.push_back(i), n /= i;	// Get every prime inside n.    n / i^j is a new number
 
 	// Two ways to prove that n will be prime number if n  1
 	// 1) Think in n  pi^x as a NEW sub-problem. If we went to its sqrt and % applied, then we are facing a prime number
